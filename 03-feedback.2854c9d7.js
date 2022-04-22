@@ -4,4 +4,4 @@ var t=arguments[3],n="Expected a function",e=NaN,i="[object Symbol]",r=/^\s+|\s+
 },{}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash.throttle"));function t(e){return e&&e.__esModule?e:{default:e}}const a="feedback-form-state",r=document.querySelector(".feedback-form"),o=new FormData(r);function n(e){let t={};const r=e.target.value.trim(),o=e.target.name,n=localStorage.getItem(a);if(n){const e=JSON.parse(n);Object.keys(e).forEach(a=>{t[a]=e[a]}),t[o]=r,localStorage.setItem(a,JSON.stringify(t))}else t[o]=r,localStorage.setItem(a,JSON.stringify(t))}function c(){const e=localStorage.getItem(a);if(e){const t=JSON.parse(e);Object.keys(t).forEach(e=>{r[e].value=t[e]})}}function l(e){e.preventDefault(),new FormData(e.currentTarget).forEach((e,t)=>{console.log(`${t} : ${e}`),r[t].value=""}),localStorage.clear()}c(),r.addEventListener("input",(0,e.default)(n,500)),r.addEventListener("submit",l);
 },{"lodash.throttle":"FNyO"}]},{},["TTyb"], null)
-//# sourceMappingURL=/parcel-project-template/03-feedback.2854c9d7.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.2854c9d7.js.map
